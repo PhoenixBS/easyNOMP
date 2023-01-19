@@ -22,23 +22,18 @@ git clone https://github.com/EasyX-Community/EasyNOMP.git ; cd EasyNOMP ; ./inst
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
-sudo apt-get install -y sudo git nano wget curl ntp build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev git npm nodejs nodejs-legacy libminiupnpc-dev redis-server software-properties-common fail2ban
+sudo apt-get install -y sudo git nano wget curl build-essential libtool autotools-dev autoconf pkg-config libssl-dev libboost-all-dev git npm nodejs libminiupnpc-dev redis-server software-properties-common 
 sudo add-apt-repository ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install libdb4.8-dev libdb4.8++-dev
-sudo systemctl enable fail2ban
-sudo systemctl start fail2ban
-sudo systemctl enable redis-server
-sudo systemctl start redis-server
-sudo systemctl enable ntp
-sudo systemctl start ntp
+
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
 source ~/.bashrc
 nvm install 8
 nvm use 8
 npm update -g
-npm install -g pm2@latest
-npm install -g npm@latest
+npm install -g pm2@4.2.0
+npm install -g npm@6.13.4
 ```
 
 -------
@@ -52,7 +47,7 @@ redis-cli FLUSHALL
 -------
 ### Install Pool
 ```
-git clone https://github.com/EasyX-Community/EasyNOMP.git
+git clone https://github.com/PhoenixBS/EasyNOMP.git
 cd EasyNOMP
 npm install
 npm update
